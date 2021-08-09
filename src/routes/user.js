@@ -41,12 +41,12 @@ server.post('/facilites', (req, res) => {
     const {facilites}=req.body
     axios.get('https://api.mocklets.com/p68140/properties')
         .then(function (response) {
-            const even = (element) => element.includes(prop.facilites);
 
             const props=response.data.filter(function(prop) {
-                let array=[]
 
-                return prop.facilites.includes(facilites)
+                return prop.facilites.some((item)=>{
+                    return facilites.includes(item)
+                })
             });
             console.log(props)
             res.json(props)
