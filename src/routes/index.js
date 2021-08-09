@@ -1,12 +1,12 @@
 const { Router } = require('express');
 
 //Importamos los routers
-const user = require('./user.js');
+const endpoints = require('./endpoints.js');
 
 const router = Router();
 
 // Configuramos los routers
-router.use('/', user);
+router.use('/', endpoints);
 
 
 module.exports = router;

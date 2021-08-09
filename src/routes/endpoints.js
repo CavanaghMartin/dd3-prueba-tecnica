@@ -1,7 +1,7 @@
 const server = require('express').Router();
 const axios = require('axios');
 
-//http://localhost:3001/Property 71
+//get http://localhost:3001/Property 71
 server.get('/name/:name', (req, res) => {
     const {name}=req.params
     axios.get('https://api.mocklets.com/p68140/properties')
@@ -19,9 +19,15 @@ server.get('/name/:name', (req, res) => {
         })
 });
 
+
+// post http://localhost:3001/type
+//  Content-Type: application/json
+
+//  {
+//      "type":["House","Apartment"]
+//  }
 server.post('/type', (req, res) => {
     const {type}=req.body
-    console.log(type)
     axios.get('https://api.mocklets.com/p68140/properties')
         .then(function (response) {
 
@@ -37,6 +43,12 @@ server.post('/type', (req, res) => {
         })
 });
 
+// post http://localhost:3001/facilites
+// Content-Type: application/json
+
+// {
+//     "facilites":["Pool","Hot tub"]
+// }
 server.post('/facilites', (req, res) => {
     const {facilites}=req.body
     axios.get('https://api.mocklets.com/p68140/properties')

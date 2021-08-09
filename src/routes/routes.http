@@ -1,7 +1,7 @@
 
 post http://localhost:3001/type
-Content-Type: application/json
+ Content-Type: application/json
 
-{
-    "facilites":["Pool","Hot tub"]
-}
+ {
+     "type":["House","Apartment"]
+ }
