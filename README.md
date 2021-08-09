@@ -1,4 +1,6 @@
 # dd3-prueba-tecnica
+escribir en CLI npm install y nodemon  para iniciar la app<br>
+
 1)get http://localhost:3001/Property 71  <br>
 <br>
 2) post http://localhost:3001/type  
