@@ -1,6 +1,7 @@
 const server = require('express').Router();
 const axios = require('axios');
 
+//http://localhost:3001/Property 71
 server.get('/name/:name', (req, res) => {
     const {name}=req.params
     axios.get('https://api.mocklets.com/p68140/properties')
